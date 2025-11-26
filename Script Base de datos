@@ -1,0 +1,64 @@
+-- Codigo de MySQL Workbench
+Create database smart_book1;
+use smart_book1;
+
+CREATE TABLE clientes (
+  id varchar(100) NOT NULL,
+  identificacion varchar(100) NOT NULL,
+  nombre_completo varchar(100) NOT NULL,
+  email_usuario varchar(50) NOT NULL,
+  celular varchar(10) NOT NULL,
+  fecha_nacimiento date DEFAULT NULL
+);
+
+
+CREATE TABLE Libros (
+    id VARCHAR(150) PRIMARY KEY,
+    nombre VARCHAR(150) NOT NULL,
+    nivel VARCHAR(150) NOT NULL,
+    stock INTEGER NOT NULL,
+    tipo int not null,
+    editorial VARCHAR(150) NOT NULL,
+    edicion VARCHAR(150) NOT NULL,
+    lote VARCHAR(6)
+); 
+ALTER TABLE libros ADD lote VARCHAR(6);
+
+CREATE TABLE ingreso_libros (
+  id varchar(100) NOT NULL,
+  fecha date NOT NULL,
+  libro varchar(150) NOT NULL,
+  lote varchar(6) NOT NULL,
+  unidades int(11) DEFAULT NULL,
+  valor_compra decimal(10,0) NOT NULL,
+  valor_venta_publico decimal(10,0) default null
+  );
+
+create table usuarios (
+    id VARCHAR(150) PRIMARY KEY,
+    identificacion VARCHAR(150) NOT NULL,
+    contraseña VARCHAR(150) NOT NULL,
+    nombres VARCHAR(150) NOT NULL,
+    correo VARCHAR(150) not null,
+    rol VARCHAR(150) NOT NULL,
+    email_verificado TINYINT DEFAULT 0,
+    token_verificacion VARCHAR(200),
+    token_expiracion DATETIME NULL,
+    codigo_recuperacion VARCHAR(100),
+    codigo_expiracion DATETIME NULL
+);
+
+
+CREATE TABLE venta_libros (
+  id varchar(100) NOT NULL,
+  numero_recibo varchar(22) NOT NULL,
+  fecha date NOT NULL,
+  libro varchar(100) NOT NULL,
+  unidades int(11) NOT NULL,
+  cliente varchar(100) NOT NULL,
+  usuario varchar(100) NOT NULL,
+  observaciones varchar(1000) DEFAULT NULL,
+  PRIMARY KEY (id)
+);
+
+
