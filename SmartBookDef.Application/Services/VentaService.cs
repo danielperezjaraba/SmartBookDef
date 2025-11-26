@@ -26,6 +26,12 @@ public class VentaService
 
     public CrearVentaResponse CrearVentaYEnviarPdf(CrearVentaRequest request)
     {
+        var usuario = _ventaRepository.Usuario(request.Usuario);
+        if (string.IsNullOrEmpty(usuario))
+        {
+            throw new BussinesRuleException("No se encontró un Usuario con esta Identificación");
+        }
+
         if (request.Libros == null || !request.Libros.Any())
         {
             throw new BussinesRuleException("Debe incluir al menos un libro en la venta");
