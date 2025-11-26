@@ -1,0 +1,28 @@
+Use smart_book1;
+Insert INTO usuarios values('638997380400469302', '1', '$2a$11$SkllUhtKHNh.I5AGgi72YunBlPrUAEEI4EPbJ8H9Vps/TbKtdPcfy', 'AdminCDI', 'admin.cdi@cecar.edu.co', '1', '1', NULL, NULL, NULL, NULL);
+-- La contraseña desencriptada es AdminCDI 
+
+INSERT INTO libros (id, nombre, nivel, stock, tipo, editorial, edicion, lote) VALUES
+(1, 'Whispers of the Magic Alphabet', 'KIDS A1.1', 32, 1, 'Pearson', '1', '2025-2'),
+(2, 'The Enchanted English Quest', 'KIDS A1.2', 25, 2, 'Oxford', '2', '2025-2'),
+(3, 'The Secret Code of Words', 'TEENS A1.1', 18, 1, 'Cambridge', '1', '2025-2'),
+(4, 'Missions of the Lost Grammar', 'TEENS A1.2', 27, 1, 'Santillana', '2', '2025-2'),
+(5, 'Starship ABC: Galactic Adventures', 'KIDS A1.1', 40, 2, 'Richmond', '1', '2025-2'),
+(6, 'The Path of Enchanted Words', 'KIDS A1.2', 29, 1, 'Pearson', '1', '2025-2'),
+(7, 'Beyond the Gate of Expressions', 'TEENS A1.1', 21, 2, 'Oxford', '2', '2025-2'),
+(8, 'Realm of the Endless Vocabulary', 'TEENS A1.2', 24, 1, 'Cambridge', '1', '2025-2'),
+(9, 'The Secret Garden of Letters', 'KIDS A1.1', 33, 1, 'Santillana', '1', '2025-2'),
+(10, 'Chronicles of the Word Seekers', 'TEENS A1.2', 19, 2, 'Richmond', '2', '2025-2');
+
+
+INSERT INTO clientes (id, identificacion, nombre_completo, email_usuario, celular, fecha_nacimiento) VALUES
+('638996956376300882', 1, 'Carlos Andres Lopez', 'carlos.andres@cecar.edu.co', '3015589923', '2004-03-15'),
+('827196553873002931', 2, 'Maria Fernanda Ruiz', 'maria.fernanda@cecar.edu.co', '3124478891', '2002-07-22'),
+('739288115903664201', 3, 'Juan Pablo Torres', 'juan.pablo@cecar.edu.co', '3009874412', '2005-11-03'),
+('912337766501288933', 4, 'Laura Sofia Mendoza', 'laura.sofia@cecar.edu.co', '3116657844', '2003-05-10'),
+('556773920118364552', 5, 'Daniel Alejandro Perez', 'daniel.alejandro@cecar.edu.co', '3201145980', '2006-09-28'),
+('667892334102886511', 6, 'Jorge Luis Castillo', 'jorge.luis@cecar.edu.co', '3157783490', '2001-12-19'),
+('985621730009128734', 7, 'Ana Lucia Romero', 'ana.lucia@cecar.edu.co', '3229981143', '2000-02-01'),
+('773520118845600213', 8, 'Samuel David Ortega', 'samuel.david@cecar.edu.co', '3176452309', '2007-06-07'),
+('699331002874663918', 9, 'Valentina Nicole Marquez', 'valentina.nicole@cecar.edu.co', '3042297765', '2004-10-14'),
+('844299166452731009', 10, 'Miguel Angel Santos', 'miguel.angel@cecar.edu.co', '3194401178', '2003-01-30');
