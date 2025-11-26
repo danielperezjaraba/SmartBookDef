@@ -22,7 +22,6 @@ CREATE TABLE Libros (
     edicion VARCHAR(150) NOT NULL,
     lote VARCHAR(6)
 ); 
-ALTER TABLE libros ADD lote VARCHAR(6);
 
 CREATE TABLE ingreso_libros (
   id varchar(100) NOT NULL,
