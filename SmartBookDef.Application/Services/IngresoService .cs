@@ -30,7 +30,9 @@ public class IngresoService
         var loteDelLibro = _ingresoRepository.ObtenerLotePorId(request.Libro);
 
         if (loteDelLibro is null)
+        {
             throw new BussinesRuleException("El libro no tiene lote asociado.");
+        }
 
         string lote = loteDelLibro;
 
